@@ -1,0 +1,57 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+.head
+{
+  flex: auto;
+  font-size: 2rem;
+}
+</style>
+<div >
+  <p class="text-dark container text-center">Students List</p>
+
+</div>
+<div class="container">
+    <form >
+      <div class="form-group">
+        <label for="usr">Enter search:</label>
+        <input type="text" class="form-control" id="usr" placeholder="---enter query here---">
+      </div>
+    </form>
+</div>
+
+<table class="container">
+  <tr>
+    <th>ID</th>
+    <th>ROLL NO</th>
+    <th>NAME</th>
+    <th>ACTION</th>
+  </tr>
+  <tr *ngFor="let student of students">
+    <td>{{student.id}}</td>
+    <td>{{student.rollno}}</td>
+    <td>{{student.name}}</td>
+    <td><a href="#">View Profile</a></td>
+  </tr>
+
+</table>
+
