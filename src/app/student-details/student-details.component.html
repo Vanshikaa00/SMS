@@ -1,1 +1,41 @@
-<p>student-details works!</p>
+<style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  .head
+  {
+    flex: auto;
+    font-size: 2rem;
+  }
+  .marrgin{
+    margin-left: 210px;
+  }
+</style>
+<span class="display-4 marrgin">Student Detail :</span>
+<br/>
+<br/>
+<table class="container">
+  <tr>
+    <th>ID</th>
+    <th>ROLL NO</th>
+    <th>NAME</th>
+  </tr>
+  <tr *ngIf="student">
+    <td>{{ student.id }}</td>
+    <td>{{ student.rollno}}</td>
+    <td>{{ student.name}}</td>
+  </tr>
+</table>
+

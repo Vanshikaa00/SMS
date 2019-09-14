@@ -46,11 +46,11 @@
     <th>NAME</th>
     <th>ACTION</th>
   </tr>
-  <tr *ngFor="let student of students">
+  <tr *ngFor="let student of students; index as studentId">
     <td>{{student.id}}</td>
     <td>{{student.rollno}}</td>
     <td>{{student.name}}</td>
-    <td><a href="#">View Profile</a></td>
+    <td><a [routerLink]="['/students', studentId]" > View Profile </a></td>
   </tr>
 
 </table>
